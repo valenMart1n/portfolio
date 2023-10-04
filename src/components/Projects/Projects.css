@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.projects-background{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    background-color:#222222;
+    
+}
+.projects-background h2{
+    font-family: 'Tourney', cursive;
+    color:#F12971;
+    width: 100%;
+    font-size: 30px;
+    margin-top: 3em;
+    text-align: center;
+}
+
+.projects-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    margin-top: 3em;
+    width: 100%;
+    
+ 
+}
+.projects{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.projects img{
+    
+    width: 90%;
+    height: 100%;
+  
+   
+}
+@keyframes moveLeft {
+    from {
+        transform: translateX(-300px);
+        opacity: 0;
+       
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+       
+       
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+@media(min-width: 430px){
+    .projects{
+        width: 50%;
+    }
+}
+
+@media(min-width: 769px){
+    .projects-content{
+        width: 80%;
+        
+    }
+    .projects img{
+        opacity: 0;
+        scale: 25%;
+    }
+   
+    .projects-background.active h2{
+        font-size: 50px;
+       font-weight: bolder;
+        animation: moveLeft 3s ease;
+    }
+    .projects.active img{
+       
+        opacity: 1;
+        scale: 100%;
+        transition: all 2s ease;
+    
+    }
+}

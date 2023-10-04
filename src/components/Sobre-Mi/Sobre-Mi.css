@@ -1,0 +1,181 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+.about-background{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 100%;
+    color: white; 
+    background-color:#222222;
+      
+   
+}
+.about-background h2{
+
+    font-family: 'Tourney', cursive;
+    color:#F12971;
+    width: 100%;
+    font-size: 30px;
+    margin-top: 3em;
+    text-align: center;
+    animation: moveLeft 1.5s ease both;
+    
+}
+
+.about-background p{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 3em;
+}
+.about-content{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 15px;
+    margin-bottom: 5em;
+}
+/*Quiebre*/
+.skills-background{
+    background-color:#222222;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;  
+    margin-left: 3em;
+    align-items: center;
+    margin-bottom: 10em;
+    z-index: 0;
+    animation: show 1.5s ease ;
+    
+}
+.skills-background h3{
+    
+    color:#F12971;
+    font-size: 25px;
+  
+    width: 90%; 
+    animation: moveRight 3s ease both;
+}
+
+.skills-content{
+    margin-top: 2em;
+    width: 85%;
+    height: 80%;
+    border-radius: 10px;
+    background-color: #f1297281;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.skills-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 18px;
+    width: 6em;
+    height: 2em;
+    background-color: #4b0e24;
+    text-align: center;
+    margin: 10px;
+    border-radius: 5px;
+    margin-right: 0px;
+    font-weight: bold;
+    align-items: center;
+   
+}
+.icons{
+    color: #F12971;
+    margin-right: 5px;
+    background-color: #4b0e24;
+   
+    
+}
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(-300px);
+        opacity: 0;
+       
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+       
+       
+    }
+}
+
+ @keyframes rotate-vertical{
+    from{
+        transform:rotateY(0);
+       
+    }
+    
+    to {
+        transform:rotateY(360deg);
+        }
+    }
+
+@media(min-width: 1024px){
+    .icons{
+        font-size: 2.5em;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .skills-cards{
+        font-size: 30px;
+        width: 12%;
+        height: 5em;
+        
+    }
+    .skills-background{
+        
+        width: 100%;
+        height: 15em;
+        
+    }
+    .skills-content{
+        margin:auto;
+    }
+    .skills-list{
+        font-size: 18px;
+        
+    }   
+    .about-content{
+        width: 70%;
+    }    
+  
+    .about-background p{
+        margin-left: 3.5em;
+        font-size: 20px;
+        width: 60%;
+    }
+.about-background h2{
+        font-size: 50px;
+        
+    }
+
+    .productos article:hover i{
+        transform: rotateZ(-90deg);
+       
+        
+    }
+}
+

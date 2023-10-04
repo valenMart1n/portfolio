@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.contact-background{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10em;
+    height: 40vh;
+}
+.contact-background h2{
+    font-family: 'Tourney', cursive;
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    margin-top: 2em;
+    color: #04c2c9;
+    margin-bottom: 1em;
+}
+.contacts-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.contacts{
+    font-family: 'Kenia', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    width: 100%;
+    height: 2em;
+    font-size: 35px;    
+}
+.contact-icon{
+    margin-left: 10px;
+}
+@media(min-width: 769px){
+    .contacts{
+        width: 33%;
+        font-size: 50px;   
+       
+    }
+    .contact-background h2{
+        font-size: 50px
+    }
+}
