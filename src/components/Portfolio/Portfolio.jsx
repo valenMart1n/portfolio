@@ -2,8 +2,10 @@ import React, {useState, useRef, useEffect} from "react";
 import trabajo1 from "./trabajo1.jpg";
 import trabajo2 from "./trabajo2.jpg";
 import trabajo3 from "./trabajo3.jpg";
-import './Projects.css';
-function Projects() {
+import './Portfolio.css';
+import Bar from '../Bar/Bar';
+
+function Portfolio() {
    
     const [projects, setProjects] = useState("");
     const divRef = useRef();
@@ -28,23 +30,16 @@ function Projects() {
 return(
     <div ref={divRef} className={`projects-background ${projects}`}>
            <h2>PROYECTOS</h2>
+           <Bar className="bar"/>
            <div className="projects-content">
-               <div className={`projects ${projects}`}>
-               <img src={trabajo1}></img>
-               </div>
-               <div className={`projects ${projects}`}>
-               <img src={trabajo2}></img>
-               </div>
-               <div className={`projects ${projects}`}>
-               <img src={trabajo3}></img>
-               </div>
-               <div className={`projects ${projects}`}>
-
-</div>
+           <div className={`projects ${projects}`}><img src={trabajo1}></img><div className="card">asdASdasd</div></div> 
+           <div className={`projects ${projects}`}><img src={trabajo2}></img></div> 
+           <div className={`projects ${projects}`}><img src={trabajo3}></img></div> 
+           <div className={`projects ${projects}`}><img src={trabajo3}></img></div> 
             </div>
             
     </div>
 );
 }
 
-export default Projects;
+export default Portfolio;

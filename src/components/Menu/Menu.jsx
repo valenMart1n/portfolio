@@ -1,7 +1,7 @@
 import React, {useState, useRef, useEffect} from "react";
 import './Menu.css';
 import logo from "./logo.jpg";
-import {BrowserRouter, Link, Route} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 import BurgerButton from "./burger-button/BurgerButton";
 
@@ -57,15 +57,17 @@ function Menu() {
           <BurgerButton clicked={clicked} handleClick={handleClick}/>
          </div>
          <div className="navbar">
-          <Link className="navbar-element" onClick={() => handleButtonClick(650)} to="/sobreMi">SOBRE MI</Link>
-          <Link className="navbar-element" onClick={() => handleButtonClick(1270)} to="/proyectos">PROYECTOS</Link>
-          <Link className="navbar-element" to="/contacto">CONTACTO</Link>
+         <Link className="navbar-element" onClick={() => handleButtonClick(0)} to="/">INICIO</Link>
+          <Link className="navbar-element" onClick={() => handleButtonClick(810)} to="/sobreMi">SOBRE MI</Link>
+          <Link className="navbar-element" onClick={() => handleButtonClick(1325)} to="/proyectos">PROYECTOS</Link>
+          <Link className="navbar-element" onClick={() => handleButtonClick(2500)} to="/contacto">CONTACTO</Link>
         </div>
         </div>
         <div className={`links ${clicked ?  "active" : ""} ${header}`}>
-          <Link className="option" to="/sobreMi">SOBRE MI</Link>
-          <Link className="option" to="/proyectos">PROYECTOS</Link>
-          <Link className="option" to="/contacto">CONTACTO</Link>
+        <Link className="option" onClick={() => handleButtonClick(0)} to="/">INICIO</Link>
+          <Link className="option" onClick={() => handleButtonClick(700)} to="/sobreMi">SOBRE MI</Link>
+          <Link className="option" onClick={() => handleButtonClick(1300)} to="/proyectos">PROYECTOS</Link>
+          <Link className="option" onClick={() => handleButtonClick(2500)} to="/contacto">CONTACTO</Link>
           </div>
        
        </div>

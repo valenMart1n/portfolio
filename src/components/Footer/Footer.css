@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-background{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #1b242f;
+    font-size: 30px;
+}
+.turnUp-icon{
+    color: white;
+    background-color: #F12971;
+    margin: 10px;
+    padding: 10px;
+   
+}
+.brand{
+    margin: 10px;
+    background-color: #262f38;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+}
+.footnote{
+    color: white;
+    font-size: 16px;
+    width: 100%;
+    margin: 20px;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    text-align: center;
+}

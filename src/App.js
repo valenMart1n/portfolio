@@ -4,7 +4,7 @@ import Menu from "./components/Menu/Menu";
 import Sign from './components/Sign/Sign';
 
 import SobreMi from './components/Sobre-Mi/Sobre-Mi';
-import Projects from './components/Projects/Projects';
+import Portfolio from './components/Portfolio/Portfolio';
 import Footer from './components/Footer/Footer';
 import Contact from './components/Contact/Contact';
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <Menu />
       <SobreMi />
      
-      <Projects />
+      <Portfolio />
       <Contact />
       <Footer />
     </div>

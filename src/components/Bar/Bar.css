@@ -1,0 +1,20 @@
+.bar{
+    width: 15%;
+    height: 4px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 3em;
+   
+}
+@media(min-width: 769px){
+    .bar{
+        width: 10%;
+       
+    }
+}
+@media(min-width: 1024px){
+    .bar{
+        width: 6%;
+       
+    }
+}

@@ -4,48 +4,137 @@
     padding: 0;
 }
 .contact-background{
+    background-color:#252934;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 10em;
-    height: 40vh;
+    
+    height: 60%;
 }
 .contact-background h2{
-    font-family: 'Tourney', cursive;
-    text-align: center;
+    color: white;
+    
+    font-family: 'Raleway', sans-serif;
     width: 100%;
-    font-size: 30px;
+    font-size: 33px;
     margin-top: 2em;
-    color: #04c2c9;
-    margin-bottom: 1em;
-}
+    text-align: center;
+ }
+ .contact-background .bar{
+    background-color: white;
+ }
+
 .contacts-container{
+    background-color:#252934;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+    height: 40vh;
+    margin-bottom: 4.5em;
+}
+.field-email{
+    border: none;
+    background-color: #1e242c;
+    width: 80%;
+    height: 15%;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+}
+.field-name{
+    border: none;
+    background-color: #1e242c;
+    width: 80%;
+    height: 15%;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+}
+.email-message{
+    border: none;
+    color: white;
+    background-color: #1e242c;
+    width: 80%;
+    height: 43%;
+    padding: 10px;
+    font-size: 16px;
+}
+.email-send{
+    
+    margin-top: 20px;
+
+    font-family: 'Raleway', sans-serif;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffffff;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #252934;
+    padding: 10px;
+    
+}
+.result{
+    margin-top: 10px;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    color: white;
 }
 .contacts{
-    font-family: 'Kenia', cursive;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    flex-wrap: wrap;
     color: white;
-    width: 100%;
-    height: 2em;
-    font-size: 35px;    
+    width: 80%;
+    height: 4em;   
+    border-radius: 10px;
+    margin-bottom: 1em;
 }
 .contact-icon{
+    font-size: 35px;    
+    width: 100%;
+ 
     margin-left: 10px;
+    margin-bottom: 20px;
+    transition: all 0.5s;
 }
-@media(min-width: 769px){
-    .contacts{
-        width: 33%;
-        font-size: 50px;   
-       
+.field-email, .field-name, .email-message{
+    max-width: 560px;
+}
+
+
+@media(min-width: 1024px){
+    .field-email, .field-name, .email-message{
+        max-width: 800px;
     }
     .contact-background h2{
-        font-size: 50px
+        color: #252934;
     }
+    .contact-background .bar{
+        background-color: #252934;
+    }
+    .contact-background.active h2{
+        color:white;
+        animation: moveLeft 0.75s ease both;
+    }
+    .contact-background.active .bar{
+        background-color: white;
+        animation: moveLeft 0.75s ease both;
+        animation-delay: 0.5s;
+    }
+    
+    .contact-background h2{
+        font-size: 40px
+    }
+  
+ 
+  
+}
+.email-send:hover{
+    border-color: #04c2c9;
+    
+    color: #04c2c9;
+    transition: all .5s ease;
 }

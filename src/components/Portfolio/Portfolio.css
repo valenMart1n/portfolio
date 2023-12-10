@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.card{
+    position: absolute;
+    z-index: 0;
+}
+.projects{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.projects img{
+    
+    width: 100%;
+    height: 100%;
+  
+   
+}
+
+.projects-background{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 30%;
+    justify-content: center;
+    
+   
+}
+.projects-background h2{
+    color:#444649;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    font-size: 33px;
+    margin-top: 2em;
+    text-align: center;
+}
+.bar{
+    background-color: #444649;
+     
+}
+
+.projects-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95%;
+    
+ 
+}
+
+
+@keyframes moveLeft {
+    0% {
+       
+        opacity: 0;
+        transform: translateX(-300px);     
+       
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);   
+        
+       
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 1;
+        
+    }
+    to {
+        opacity: 0;
+        
+    }
+}
+
+@media(min-width: 430px){
+    .projects{
+        width: 50%;
+    }
+}
+
+@media(min-width: 1024px){
+    .projects{
+        width: 33%;
+        max-width: 396px;
+        max-height: 246px;
+       
+        
+    }
+    .projects img{
+        opacity: 0;
+        scale: 25%;
+    }
+    .projects-content{
+        width: 100%;
+        
+    }
+    
+    .projects-background h2{
+        color: #f5f5f5;
+    }
+    .projects-background .bar{
+        background-color:  #f5f5f5;
+    }
+   
+    .projects-background.active h2{
+        color:#444649;
+        font-size: 40px;
+        animation: moveLeft 0.75s ease both;
+    }
+    .projects-background.active .bar{
+        background-color: #444649;
+        animation: moveLeft 0.75s ease both;
+        animation-delay: 0.5s;
+    }
+    .projects.active img{
+        z-index: 1;
+        animation: appear 2s ease both;
+        
+    }
+
+    .card:hover{
+    z-index: 2;
+    border-style: solid;
+    border-color: aqua;
+    width: 10px;
+    height: 10px;
+   }
+}

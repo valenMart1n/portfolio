@@ -11,7 +11,7 @@
     transition: all .5s ease;
 }
 
-@media(min-width: 720px){
+@media(min-width: 1024px){
     .button{
         display: none;
     }

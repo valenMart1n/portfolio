@@ -6,7 +6,7 @@
   }
 .background{
     background-color:#222222;
-    width: 100%;
+  
 }
 .icon{
     margin-right: 20px;
@@ -18,9 +18,10 @@
    margin-top: 10px;
     width: 170px;
     height: 50px;
-    margin-bottom: 11px;
+    
 }
 .header{
+  
     text-align: center;
     display: flex;
     flex-wrap: nowrap;
@@ -28,46 +29,41 @@
     align-items: center;
     font-size: 12px;
     height: 4.5em;
-    margin-left: 5px;
     border-bottom-style: solid;
     border-color: #04c2c9;
-    border-bottom-width: 1px;
+    border-bottom-width: 2px;
+    transition: all .5s ease;
     
 }
 .links{
-   height: 0;
-   display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
+    
+    height: 0;
     pointer-events: none;
     overflow: hidden;
+    width: 100%;
+    font-size: 17px;
+   
    transition: all .5s ease;
    
 
 }
+/*No es el problema*/
 .links.active{
-    
     display: flex;
     flex-wrap: wrap;
-    height: 9em;
-    
-    font-size: 14px;
-    margin-top: 5px;
-    padding-bottom: 10px;
-    pointer-events: auto;
+    pointer-events: all;
+    overflow:auto;
+    height: 11em;
+    z-index: 3;
     transition: all .5s ease;
-    font-weight: bold;
-    
-    border-bottom-style: solid;
-    border-bottom-color: #04c2c9;
-    border-bottom-width: 1px;
-
-}
-.option{
    
+}
+
+.option{
+    
     width: 100%;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: white;
     margin-top: 10px;
     margin-left: 20px;
     
@@ -88,30 +84,34 @@
     
 }
 
-.header.fixed{
-    position: fixed;
-    top: 0;
-    width: 99vw;
+.header.fixed{ 
+   position: fixed;
+    top: 0px;
+    width: 100%;
     z-index: 1;
     background-color:#222222;
-    
+    transition: all .5s ease;
+   
 }
+
+
 .links.active.fixed{
+    background-color:#222222;
     position: fixed;
     top: 0;
-    margin-top: 3.4em;
-    width: 90vw;
-    z-index: 1;
-    background-color:#222222;
+    margin-top: 3.2em;
+    transition: all .5s ease;
 }
-@media(min-width: 720px){
+
+@media(min-width: 1024px){
     .icon{
         display: none;
     }
    .links.active{
     height: 0;
-    transition: all .5s ease;
+
     border-bottom-style: none;
+    transition: all .5s ease;
    }
    .navbar{
     display: block;

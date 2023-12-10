@@ -1,11 +1,22 @@
 import React, {useState} from "react";
 import './Sign.css';
+
 import background from "./background.jpg";
 import profile from "./perfil.png";
 import { Icon } from "../Icons";
 import { faArrowRight} from "@fortawesome/free-solid-svg-icons";
 
 function Sign() {
+    const [scrollY, setScrollY] = useState(0);
+    const handleButtonClick = (targetY) => {
+
+        window.scrollTo({
+          top: targetY,
+          behavior: "smooth"
+        });
+    
+        setScrollY(targetY);
+      };
     return(
         <div className="fondo">
             <div className="flex">
@@ -13,9 +24,13 @@ function Sign() {
                     <h1>Valentino Martin</h1>
                     <p>Desarrollador Web Full-Stack - Java</p>
                  </div>
-            <div className="button-work-link">
-                Ver mi trabajo
-                <Icon css="arrow" icon={faArrowRight}/>
+            <div className="buttons">
+                    <div className="button-work-link">Ver mi CV</div>
+                    <div onClick={() => handleButtonClick(1300)} className="button-work-link">
+                        Ver mi trabajo
+                        <Icon css="arrow" icon={faArrowRight}/>
+                    </div>
+                    
             </div>
         </div>
         {/*
