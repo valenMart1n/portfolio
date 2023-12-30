@@ -107,7 +107,7 @@
 
 @media(min-width: 1024px){
     .field-email, .field-name, .email-message{
-        max-width: 800px;
+        max-width: 60%;
     }
     .contact-background h2{
         color: #252934;
